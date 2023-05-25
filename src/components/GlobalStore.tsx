@@ -27,7 +27,7 @@ type GlobalContextValue = {
 
 const GlobalContext = createContext<GlobalContextValue>({
   configValues: {
-    openaiApiUrl: 'https://api.openai.com',
+    openaiApiUrl: 'https://api.openai-proxy.com/',
     openaiApiKey: '',
     streamEnabled: true,
     currentModel: 'gpt-3.5-turbo',
@@ -66,14 +66,14 @@ export function GlobalProvider(props: Props) {
     toLang: 'auto',
   });
   const [configValues, setConfigValues] = useLocalStorage<ConfigValues>('extra-config', {
-    openaiApiUrl: 'https://api.openai.com',
+    openaiApiUrl: 'https://api.openai-proxy.com/',
     openaiApiKey: '',
     streamEnabled: true,
     currentModel: 'gpt-3.5-turbo',
     tempretureParam: 0.7,
   });
   const {
-    openaiApiUrl = 'https://api.openai.com',
+    openaiApiUrl = 'https://api.openai-proxy.com/',
     openaiApiKey = '',
     streamEnabled = true,
     currentModel = 'gpt-3.5-turbo',
