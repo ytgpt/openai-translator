@@ -1,5 +1,5 @@
 export default {
-  baseUrl: 'https://api.openai.com',
+  baseUrl: 'https://api.openai-proxy.com/',
   endpoints: {
     v1: {
       completions: {
